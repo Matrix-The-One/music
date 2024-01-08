@@ -7,7 +7,7 @@ const GITHUB_REPOSITORY_URL = '//raw.githubusercontent.com/Matrix-The-One/music/
  * @name 生成Json文件
  * @param {string} readDirName 读取目录
  * @param {string} writeFilePath 写入Json文件路径
- * @param {(data: { name: string; singer: string; source: string; poster: string }[]) => Record<string, any>} mutantData 写入Json文件路径
+ * @param {(data: import('./typings').Entity[]) => Record<string, any>} mutantData 写入Json文件路径
  */
 const generateJson = async (readDirName, writeFilePath, mutantData) => {
   const musicList = await fs.readdir(path.resolve(__dirname, readDirName, 'source'))

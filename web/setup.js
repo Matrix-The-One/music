@@ -3,7 +3,7 @@ const { generateJson } = require('../main')
 /**
  * @name 突变数据
  * @description 对歌曲进行排序
- * @param {{ name: string; singer: string; source: string; poster: string }[]} data 数据
+ * @param {import('../typings').Entity[]} data 数据
  */
 const mutantData = (data) => {
   const forefront = ['以父之名', '七里香', '夜曲']
