@@ -12,6 +12,7 @@ const GITHUB_REPOSITORY_URL = '//raw.githubusercontent.com/Matrix-The-One/music/
 const generateJson = async (readDirName, writeFilePath, mutantData) => {
   const musicList = await fs.readdir(path.resolve(__dirname, readDirName, 'source'))
   const posterList = await fs.readdir(path.resolve(__dirname, readDirName, 'poster'))
+
   const data = musicList?.map((music) => {
     const [name, singer] = music.split('-')
     const poster = posterList.find((p) => music.split('.')[0] === p.split('.')[0])
